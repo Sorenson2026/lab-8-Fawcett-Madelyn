@@ -11,7 +11,7 @@ int main()
 {
 
 	//variables
-	int maximum = 0, minimum = 1, num, total = 0;
+	int maximum = 1, minimum = 1, num, total = 0;
 	double count = 0, average = 0;
 
 	//get numbers
@@ -22,7 +22,7 @@ int main()
 	//input validation
 	while (num < 0 || num > 10)
 	{
-		cout << "Please enter a valid number (1 - 10) : ";
+		cout << "Please enter a valid number (1 - 10): ";
 		cin >> num;
 	}
 
@@ -31,7 +31,7 @@ int main()
 	{
 		total += num;
 		count++;
-		cout << "Enter another integer (0 to quit) : ";
+		cout << "Enter another integer (0 to quit): ";
 		cin >> num;
 		if (num > maximum)
 			maximum = num;
@@ -49,7 +49,7 @@ int main()
 	cout << "CountMin  Max  Average\n";
 	cout << setprecision(5) << count;
 	cout << setw(5) << minimum;
-	cout << setw(4) << maximum;
+	cout << setw(5) << maximum;
 	cout << setw(5) << "  " << average;
 
 
