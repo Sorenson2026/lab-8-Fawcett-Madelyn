@@ -1,6 +1,6 @@
 //program to process a sequence of integer values in the range of 1 through 10 
 //Madelyn Fawcett
-//march 10 2026
+//March 10 2026
 
 #include <iostream>
 #include <iomanip>
@@ -11,8 +11,8 @@ int main()
 {
 
 	//variables
-	int maximum = 1, minimum = 1, num, total = 0;
-	double count = 0, average = 0;
+	int maximum = 1, minimum = 10, num, total = 0;
+	double count = 0, average;
 
 	//get numbers
 	cout << "This is a program that will take integers between 1 and 10 and give you the min max and average.\n";
@@ -27,16 +27,22 @@ int main()
 	}
 
 	//while loop
-	while (num != 0 && num >= 1 && num <= 10)
+	while (num != 0)
 	{
 		total += num;
 		count++;
-		cout << "Enter another integer (0 to quit): ";
-		cin >> num;
 		if (num > maximum)
 			maximum = num;
-		if (num < maximum && num >= 1)
+		if (num < minimum)
 			minimum = num;
+		cout << "Enter another integer (0 to quit): ";
+		cin >> num;
+
+		while (num < 0 || num >10)
+		{
+			cout << "Please enter a vailid number (1 - 10): ";
+			cin >> num;
+		}
 	}
 
 
